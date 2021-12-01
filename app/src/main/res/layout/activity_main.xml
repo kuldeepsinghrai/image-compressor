@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    android:padding="4dp"
+                    android:background="@drawable/custom_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp">
+
+
+                    <ImageView
+                        android:id="@+id/imageOriginal"
+                        android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp">
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/textOriginal"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    android:padding="4dp"
+                    android:background="@drawable/custom_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp">
+
+
+                    <ImageView
+                        android:id="@+id/imageCompressed"
+                        android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp">
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/textCompressed"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <EditText
+                    android:id="@+id/editTextHeight"
+                    android:layout_weight="1"
+                    android:hint="Height"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/custom_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                </EditText>
+                <EditText
+                    android:id="@+id/editTextWidth"
+                    android:layout_weight="1"
+                    android:hint="Width"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/custom_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                </EditText>
+
+            </LinearLayout>
+            
+
+            <TextView
+                android:id="@+id/textQuality"
+                android:text="Quality: "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <SeekBar
+                android:id="@+id/seekQuality"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </SeekBar>
+
+            <LinearLayout
+                android:layout_marginTop="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnPick"
+                    android:text="Pick Image"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Button>
+
+                <Button
+                    android:id="@+id/btnCompress"
+                    android:visibility="gone"
+                    android:text="Compress"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+            
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
